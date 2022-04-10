@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 2 unidades de medida que no ayuda a q se adapte a cada pantalla q use */
+/* EM & REM */
+
+/* 1 em es = a 16px (no siempre) */
+
+body{
+    background-image: linear-gradient(to left, pink, whitesmoke);
+}
+
+header h1{
+    text-align: center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 1rem;
+    background-color: whitesmoke;
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+
+/* transformaciones menu */
+
+nav ul li:hover{
+    background-color: pink;
+    transform: scale(1.2);
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.507);
+}
+
+/* tranformaciones img */
+
+img{
+    transition: 1s;
+}
+
+/* img:hover{
+    transform: scale(1.5);
+} */
+
+.imgLuna{
+    width: 40%;
+    animation-name: girar;
+    animation-iteration-count: infinite;
+    animation-duration: 60s;
+}
+
+@keyframes girar{
+    from{
+    transform: rotate(0)
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.mainNosotros{
+    height: 80vh;
+    display: grid;
+    grid-template-areas:"mainP mainP"
+                        "imagen1 imagen2"
+                        "imagen3 imagen4"
+                        "parrafo parrafo";
+    justify-content: center;
+}
+
+.sectionNosotros{
+    display: none;
+}
+
+.mainP{
+    grid-area: mainP;
+    text-align: center;
+}
+.imagen1{
+    grid-area: imagen1;
+}
+.imagen2{
+    grid-area: imagen2;
+}
+.imagen3{
+    grid-area: imagen3;
+}
+.imagen4{
+    grid-area: imagen4;
+}
+.parrafo{
+    grid-area: parrafo;
+}
+
+footer p{
+    text-align: center;
+}
